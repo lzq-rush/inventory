@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.26, created on 2017-03-22 07:46:30
+<?php /* Smarty version 2.6.26, created on 2017-03-22 09:56:56
          compiled from simpla/sales/out.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('modifier', 'date_format', 'simpla/sales/out.html', 33, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('modifier', 'date_format', 'simpla/sales/out.html', 37, false),)), $this); ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -37,6 +37,12 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'date_format
       <div class="tab-content default-tab" id="tab1"> -->
       <center><div class="print-table">
         <table class="table table-striped table-hover">
+          <tr>
+            <td colspan="3">客户编号：<?php echo $this->_tpl_vars['member_id']; ?>
+ 
+            客户名称：<?php if ($this->_tpl_vars['member_name']): ?><?php echo $this->_tpl_vars['member_name']; ?>
+  <?php else: ?>无<?php endif; ?></td>
+          </tr>
           <tr>
             <td colspan="3">订单号：<?php echo $this->_tpl_vars['order_id']; ?>
  购买时间：<?php echo ((is_array($_tmp=$this->_tpl_vars['dateline'])) ? $this->_run_mod_handler('date_format', true, $_tmp, "%Y-%m-%d %H:%M:%S") : smarty_modifier_date_format($_tmp, "%Y-%m-%d %H:%M:%S")); ?>

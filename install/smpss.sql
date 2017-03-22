@@ -194,8 +194,9 @@ CREATE TABLE IF NOT EXISTS `smpss_mbgroup` (
 --
 
 INSERT INTO `smpss_mbgroup` (`mgid`, `mgroup_name`, `credit`, `discount`) VALUES
-(1, '普通会员', 0, 99),
-(2, '铜牌会员', 1000, 50);
+(1, '普通会员', 0, 100),
+(2, '一般会员', 0, 98),
+(3, '铜牌会员', 1000, 90);
 
 -- --------------------------------------------------------
 

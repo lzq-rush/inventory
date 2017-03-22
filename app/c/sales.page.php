@@ -203,6 +203,8 @@ class c_sales extends base_c {
 		$goods = $saleObj->select ( "order_id={$order_id}" )->items;
 		//echo $order_id;
 		//print_r($goods);
+		$member_id = '010101';
+		$member_name = 'none';
 		if($url['ac']=='p'){//独立打印
 			if(!is_array($goods)){
 				$this->ShowMsg ( "订单中没有任何商品！" );
@@ -213,8 +215,13 @@ class c_sales extends base_c {
 				$mem_amount += sprintf ( "%01.2f", $v ['m_discount'] * $v ['num'] ); //会员优惠的总价
 				$real_amount += sprintf ( "%01.2f", $v ['price'] * $v ['num'] ); //实收金额 减去会员优惠和促销优惠
 				$dateline = $v['dateline'];
+				$member_id = $v['membercardid'];
+				$member_name = $v['realname'];
 			}
 		}
+		$this->params ['member_id'] = $member_id;
+		if($member_name == 'none') $member_name="";
+		$this->params ['member_name'] = $member_name;
 
 		$this->params ['goods'] = $goods;
 		$this->params ['order_id'] = $order_id;

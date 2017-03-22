@@ -315,7 +315,7 @@ class Db_Mysql extends DbObject{
 				return $this->lastInsertId ();
 			}
 		}
-		//echo $this->sql;
+		echo $this->sql;
 		return $r;
 	}
 

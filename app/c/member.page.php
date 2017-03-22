@@ -66,6 +66,15 @@ class c_member extends base_c {
 				}
 				$this->ShowMsg ( "修改失败" . $memberObj->getError () );
 			} else {
+				unset($post['mid']);
+				$post['mobile'] = $post['mobile']?$post['mobile']:"123";
+				$post['phone'] = $post['phone'] ? $post['phone'] : "123";
+				$post['email'] = $post['email'] ? $post['email'] : "123";
+				$post['prov_id'] = $post['prov_id'] ? $post['prov_id'] : "123";
+				$post['city_id'] = $post['city_id'] ? $post['city_id'] : "123";
+				$post['address'] = $post['address'] ? $post['address'] : "123";
+				$post['zipcode'] = $post['zipcode'] ? $post['zipcode'] : "123";
+
 				if ($memberObj->create ( $post )) {
 					$this->ShowMsg ( "添加成功！", $this->createUrl ( "/member/index" ), '', 1 );
 				}

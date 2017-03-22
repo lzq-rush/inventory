@@ -42,10 +42,10 @@
                   </span> </p>
                 <p>用户状态：
                   <span>
-                  <input name="state" type="radio" value="1" {/if $member.state eq 1/}checked="checked"{//if/}/>
-                  启用
                   <input name="state" type="radio" value="0" {/if $member.state eq 0/}checked="checked"{//if/}/>
-                  禁用</span> </p>
+                  禁用
+                  <input name="state" type="radio" value="1" {/if $member.state eq 1/}checked="checked"{//if/}/>
+                  启用</span> </p>
                 <p>手机号码：
                   <span>
                   <input type="text" class="text-input min-input" name="mobile" value="{/$member.mobile/}" />

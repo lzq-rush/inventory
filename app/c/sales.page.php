@@ -204,7 +204,7 @@ class c_sales extends base_c {
 		//echo $order_id;
 		//print_r($goods);
 		$member_id = '010101';
-		$member_name = 'none';
+		$member_name = $sales ['realname'];
 		if($url['ac']=='p'){//独立打印
 			if(!is_array($goods)){
 				$this->ShowMsg ( "订单中没有任何商品！" );
@@ -219,8 +219,8 @@ class c_sales extends base_c {
 				$member_name = $v['realname'];
 			}
 		}
-		$this->params ['member_id'] = $member_id;
-		if($member_name == 'none') $member_name="";
+		$this->params ['member_id'] = $sales ['membercardid'];
+		if($sales ['realname'] == 'none') $member_name="";
 		$this->params ['member_name'] = $member_name;
 
 		$this->params ['goods'] = $goods;

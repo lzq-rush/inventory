@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2017-03-22 08:11:34
+<?php /* Smarty version 2.6.26, created on 2017-03-22 10:07:59
          compiled from simpla/sales/sales.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'get_url', 'simpla/sales/sales.html', 11, false),)), $this); ?>
@@ -122,7 +122,7 @@ $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $th
             </tbody>
         </table>
         <div class="form">
-          <form action="<?php echo smarty_function_get_url(array('rule' => '/sales/out','data' => "oid=".($this->_tpl_vars['order_id'])), $this);?>
+          <form action="<?php echo smarty_function_get_url(array('rule' => '/sales/out','data' => "ac=p&oid=".($this->_tpl_vars['order_id'])), $this);?>
 " method="post" id="js-form2" target="_blank">
             <fieldset class="clearfix">
                 <p>

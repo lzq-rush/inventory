@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2017-03-22 09:56:56
+<?php /* Smarty version 2.6.26, created on 2017-03-22 10:31:30
          compiled from simpla/sales/out.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'date_format', 'simpla/sales/out.html', 37, false),)), $this); ?>
@@ -95,9 +95,9 @@ $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $th
           <?php endfor; endif; ?>
           <tr>
             <td colspan="3" class="alt">总价：<?php echo $this->_tpl_vars['out_amount']; ?>
-元，优惠：<?php if ($this->_tpl_vars['mem_amount'] > 0): ?><?php echo $this->_tpl_vars['mem_amount']; ?>
+元&nbsp&nbsp&nbsp&nbsp优惠：<?php if ($this->_tpl_vars['mem_amount'] > 0): ?><?php echo $this->_tpl_vars['mem_amount']; ?>
 元<?php elseif ($this->_tpl_vars['pro_amount'] > 0): ?><?php echo $this->_tpl_vars['pro_amount']; ?>
-元<?php else: ?>无<?php endif; ?>。实收：<?php echo $this->_tpl_vars['real_amount']; ?>
+元<?php else: ?>无<?php endif; ?>&nbsp&nbsp&nbsp&nbsp实收：<?php echo $this->_tpl_vars['real_amount']; ?>
 元</td>
           </tr>
           <tr>

@@ -219,7 +219,7 @@ class c_sales extends base_c {
 				$member_name = $v['realname'];
 			}
 		}
-		$this->params ['member_id'] = $sales ['membercardid'];
+		$this->params ['member_id'] = $member_id;
 		if($sales ['realname'] == 'none') $member_name="";
 		$this->params ['member_name'] = $member_name;
 
